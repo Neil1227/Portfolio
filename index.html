@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+
+            <div class="logo"><h2> <strong>NP<span class="hl-text">Acierto</span></strong></h2></div>
+            <div class="menu" id="menu">
+                <button class="close-btn"  id="closeBtn">&times;</button>
+                <a href="#home">
+                    <div class="menu-item">
+                        <i class="fas fa-house"></i>
+                        <span>Home</span>
+                    </div>
+                </a>
+                <a href="#about">
+                    <div class="menu-item">
+                        <i class="fas fa-question"></i>
+                        <span>About</span>
+                    </div>
+                </a>
+                <a href="#experiences">
+                    <div class="menu-item">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        <span>Experiences</span>
+                    </div>
+                </a>
+                <a href="#projects">
+                    <div class="menu-item">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                        <span>Projects</span>
+                    </div>
+                </a>
+                <a href="#contact">
+                    <div class="menu-item">
+                        <i class="fas fa-address-book"></i>
+                        <span>Contact</span>
+                    </div>
+                </a>
+            </div>
+            <div class="hamburger display-none" id="hamburger">
+                &#9776; 
+            </div>
+   
+        </div>
+    </nav>
+    <section class="hero" id="home">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Welcome! It's <strong style="font-weight: bold;">Neil,</strong> <br>I'm a <span class="typewriter"></span></h1>
+            <p>Bachelor of Science in Information Technology             
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-viber"></i></a>
+            </div></p>
+
+            <button class="btn-button btn btn-main">Preview CV</button>
+            
+        </div>
+    </section>
+    
+    <section class="section" id="about">
+                <div class="page-section"><h1>About <span class="hl-text">me</span></h1>
+                    <hr class="hr">
+                    <div class="row">
+                        <div class="col-md-4 mt-3 mb-3">
+                            <div class="card about-card " style="color: white; background-color: #DC5F00;"> <!-- Add 'active-card' class to make it larger by default -->
+                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                    <h3 class="card-title">Personal Information <hr class="hr" style="border-color: white;"></h3>
+                                    <p class="card-text">Hello! My name is Neil Patrick Acierto. I am <u>Bachelor of Science in Information Technology</u> degree holder and I am
+                                         passionate about technology and continuous learning. I love exploring new trends and developing innovative solutions that make a difference.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-3 mb-3">
+                            <div class="card about-card">
+                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                    <h3 class="card-title">Values and Philosophy</h3>
+                                    <p class="card-text">I believe in the power of persistence and continuous improvement. I am committed to delivering high-quality work and always striving to exceed expectations. Collaboration, integrity, and innovation are the core values that guide me.</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="col-md-4 mt-3 mb-3">
+                            <div class="card about-card ">
+                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                    <h3 class="card-title">Aspirations and Goals</h3>
+                                    <p class="card-text">My goal is to become a leading expert in web development, contributing to open-source projects and helping the tech community grow. I aspire to build applications that improve people's lives and solve real-world problems.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                    <div class="row">
+                        <div class="wrapper">
+                            <i id="left" class="fa-solid fa-angle-left"></i>
+                            <ul class="carousel">
+                              <li class="card">
+                                <div class="img"><img src="images/img-1.jpg" alt="img" draggable="false"></div>
+                                <h2>Blanche Pearson</h2>
+                                <span>Sales Manager</span>
+                              </li>
+                              <li class="card">
+                                <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+                                <h2>Joenas Brauers</h2>
+                                <span>Web Developer</span>
+                              </li>
+                              <li class="card">
+                                <div class="img"><img src="images/img-3.jpg" alt="img" draggable="false"></div>
+                                <h2>Lariach French</h2>
+                                <span>Online Teacher</span>
+                              </li>
+                              <li class="card">
+                                <div class="img"><img src="images/img-4.jpg" alt="img" draggable="false"></div>
+                                <h2>James Khosravi</h2>
+                                <span>Freelancer</span>
+                              </li>
+                              <li class="card">
+                                <div class="img"><img src="images/img-5.jpg" alt="img" draggable="false"></div>
+                                <h2>Kristina Zasiadko</h2>
+                                <span>Bank Manager</span>
+                              </li>
+                              <li class="card">
+                                <div class="img"><img src="images/img-6.jpg" alt="img" draggable="false"></div>
+                                <h2>Donald Horton</h2>
+                                <span>App Designer</span>
+                              </li>
+                            </ul>
+                            <i id="right" class="fa-solid fa-angle-right"></i>
+                          </div>
+                    </div>
+            </div>
+    </section>
+
+  
+    <section class="section" id="education">
+      <div class="page-section">
+          <h1>Education <span class="hl-text">|</span> Work <span class="hl-text">Experiences</span> </h1>
+          <hr class="hr">
+          <!-- education -->
+          <div class="container container-educ">
+              <div class="center-line">
+                  <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+              </div>
+              <div class="row row-educ first">
+                  <section>
+                    <i class="icon fas fa-graduation-cap"></i>
+                      <div class="details">
+                          <span class="title">Magalang Institute Corporation</span>
+                          <span>2014-2020</span>
+                      </div>
+                      <p>San Nicolas II, Magalang Pampanga</p>
+                      <div class="bottom">
+                          <a href="#"  class="view-location-btn">Visit</a>
+                          <i>Secondary Education</i>
+                      </div>
+                  </section>
+              </div>
+              <div class="row row-educ second" id="experiences">
+                  <section>
+                      <i class="icon fas fa-graduation-cap"></i>
+                      <div class="details">
+                          <span class="title">Pampanga State <br>Agricultural University</span>
+                          <span>2020-2024</span>
+                      </div>
+                      <p>PAC Magalang, Pampanga</p>
+                      <div class="bottom">
+                          <a href="#"  class="view-location-btn">Visit</a>
+                          <i>Tertiary Education</i>
+                      </div>
+                  </section>
+              </div>
+              <div class="row row-educ first" >
+                <section>
+                    <i class="icon fas fa-briefcase"></i>
+                    <div class="details" >
+                        <span class="title">McDonald's Magalang </span>
+                        <span>2021-2024</span>
+                    </div>
+                    <p>San Nicolas II, Magalang, Pampanga</p>
+                    <div class="bottom">
+                        <a href="#"  class="view-location-btn">Visit</a>
+                        <i>Service crew</i>
+                    </div>
+                </section>
+            </div>
+            <div class="row row-educ second" >
+                <section>
+                    <i class="icon fas fa-briefcase"></i>
+                    <div class="details" >
+                        <span class="title">Hausland Group </span>
+                        <span>February - May 2024</span>
+                    </div>
+                    <p>Brgy. Pulung Maragul, Angeles City, Pampanga</p>
+                    <div class="bottom">
+                        <a href="#"  class="view-location-btn">Visit</a>
+                        <i>Technical Support Intern Student</i>
+                    </div>
+                </section>
+            </div>
+          </div>
+          <!-- education -->
+      </div>
+  </section>
+
+    
+
+    
+
+    <script src="script.js"></script>
+
+<!-- Include Swiper JS -->
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/d4873500b0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
