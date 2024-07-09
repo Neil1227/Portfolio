@@ -16,6 +16,55 @@ body {
     margin: 0;
     padding: 0;
 }
+        /* Preloader styles */
+        #preloader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+          transition: opacity 0.5s ease-out;
+      }
+
+      #preloader.hidden {
+          opacity: 0;
+          pointer-events: none;
+      }
+
+      .spinner {
+          width: 100px;
+          height: 100px;
+          border: 10px solid transparent;
+          border-top: 10px solid #3498db;
+          border-right: 10px solid #f39c12;
+          border-bottom: 10px solid #e74c3c;
+          border-left: 10px solid #2ecc71;
+          border-radius: 50%;
+          animation: spin 1.5s linear infinite, colorchange 6s linear infinite;
+      }
+
+      @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+
+      @keyframes colorchange {
+          0% { border-top-color: #3498db; border-right-color: #f39c12; border-bottom-color: #e74c3c; border-left-color: #2ecc71; }
+          25% { border-top-color: #f39c12; border-right-color: #e74c3c; border-bottom-color: #2ecc71; border-left-color: #3498db; }
+          50% { border-top-color: #e74c3c; border-right-color: #2ecc71; border-bottom-color: #3498db; border-left-color: #f39c12; }
+          75% { border-top-color: #2ecc71; border-right-color: #3498db; border-bottom-color: #f39c12; border-left-color: #e74c3c; }
+          100% { border-top-color: #3498db; border-right-color: #f39c12; border-bottom-color: #e74c3c; border-left-color: #2ecc71; }
+      }
+
+      /* Hide the preloader after the page has loaded */
+      body.loaded #preloader {
+          display: none;
+      }
 
 .hero {
     position: relative; /* Needed for the overlay */
@@ -204,7 +253,7 @@ body {
 }
 .page-section{
     color: var(--primary-color);
-    padding-top: 50px;
+    padding-top: 5px;
     
 }
 
@@ -253,15 +302,31 @@ body {
     background-color: var(--alt-color);
 }
 
-.education {
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 auto;
-    padding: 20px ;
-    max-width: 100%;
-    height: 50dvh;
+.education-page {
+  margin: 0 auto;
+  height: 90dvh;
 }
+
+.educ-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.educ-img {
+  width: 10rem;
+}
+
+.educ-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .secondary{
     padding: 10px;
     margin-right: 20px; /* Space to the right of each item */
@@ -270,62 +335,7 @@ body {
     padding: 10px;
     margin-right: 20px; /* Space to the right of each item */
 }
-.education-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    margin: 15px 0; /* Further reduced margin */
-    padding: 10px; /* Further reduced padding */
-    background: var(--background-color);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1;
-}
 
-.education-content {
-    flex: 3;
-    background: var(--secondary-color);
-    padding: 10px; /* Further reduced padding */
-    border-radius: 8px;
-    color: var(--text-color);
-    text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive adjustments */
-@media (max-width: 767.98px) {
-    .education:before {
-        left: 20px;
-        transform: none;
-    }
-
-    .education-item {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 20px; /* Reduced padding */
-        text-align: left;
-    }
-
-    .education-item:before {
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .education-date {
-        text-align: left;
-        padding-right: 0;
-        padding-bottom: 5px; /* Reduced padding */
-    }
-
-    .education-content {
-        margin-left: 20px;
-        flex: 1;
-        padding: 10px; /* Further reduced padding */
-    }
-}
 .about-content h2,
 .about-content h3 {
     color: var(--primary-color);
@@ -421,7 +431,7 @@ body {
         transition: right 0.3s ease;
         align-items: center;
         justify-content: flex-start; /* Align items from the top */
-        padding-top: 40px; /* Add padding to create space for the X button */
+        padding-top: 60px; /* Add padding to create space for the X button */
         padding-bottom: 40px; /* Add padding to ensure space for X button at the bottom */
     }
 
@@ -514,7 +524,7 @@ body {
         position: relative; /* Needed for the overlay */
         background: url('assets/img/cropped-neil.png') no-repeat center center;
         background-attachment: fixed; /* Parallax effect */
-        background-size: fill;
+        background-size: cover;
         max-width: 100%;
         height: 100dvh;
         display: flex;
@@ -588,7 +598,12 @@ body {
         right: 0 !important;
     }
 
-
+    .row-proj {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 50px; /* Add space between cards */
+  }
 
 }
 
@@ -686,7 +701,7 @@ body {
 
   .container-educ .center-line {
     position: absolute;
-    height: 120%;
+    height: 60%;
     width: 4px;
     background: var( --primary-color);
     left: 50%;
@@ -797,7 +812,7 @@ body {
   @media  screen and (max-width: 991px) {
     .container-educ .center-line {
       position: absolute;
-      height: 150%;
+      height: 80%;
       width: 4px;
       background: var( --primary-color);
       left: 50%;
@@ -809,7 +824,7 @@ body {
   @media screen and (max-width: 790px) {
     .container-educ .center-line {
       left: 62px;
-      height: 165%;
+      height: 65%;
     }
   
     .container-educ .row-educ {
@@ -905,8 +920,8 @@ z-index: 1;
 }
 
 /* Hover effect (optional) */
-.card:hover .img img {
-  filter: grayscale(0%); /* Revert grayscale on hover */
+.card:hover .img img, .carousel.dragging .card .img img {
+  filter: grayscale(0%); /* Revert grayscale on hover and dragging */
 }
   .carousel::-webkit-scrollbar {
     display: none;
@@ -969,3 +984,63 @@ z-index: 1;
       grid-auto-columns: 100%;
     }
   }
+  .container-proj {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.row-proj {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px; /* Add space between cards */
+}
+
+.card-proj {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.card-proj:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-proj a {
+    display: block;
+}
+
+.card-proj img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.card-proj:hover img {
+    transform: scale(1.05);
+}
+
+.card-title-proj {
+    padding: 5px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-text {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.inner-card {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin: 10px;
+}
