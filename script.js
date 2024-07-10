@@ -197,19 +197,8 @@ document.addEventListener('scroll', function() {
       scrollToTopButton.classList.remove('show');
     }
 
-//     function previewCV() {
-//     var iframe = document.getElementById('cv-iframe');
-//     iframe.style.display = 'block'; // Show the iframe
-
-//     // Open the CV in a new window for viewing and printing
-//     var newWindow = window.open(iframe.src, '_blank');
-//     newWindow.focus();
-// }
-
-function printCV() {
-    const printWindow = window.open('assets/img/cv_file/Resume-Acierto (updated).docx', '_blank');
-    printWindow.print();
-}
-
+    function openPDF() {
+        window.open('assets/img/cv_file/Resume-Acierto (updated).pdf', '_blank');
+    }
   });
   
