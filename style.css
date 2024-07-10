@@ -973,6 +973,10 @@ z-index: 1;
   .carousel .card span {
     color: var(--btn-bg-color);
     font-size: 1.31rem;
+    padding: 0px 15px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
   @media screen and (max-width: 900px) {
     .wrapper .carousel {
