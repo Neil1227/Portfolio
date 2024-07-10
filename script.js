@@ -48,6 +48,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+   
+   
+    // Scroll-to-top button functionality
+    const scrollToTopBtn = document.querySelector('.scroll-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    scrollToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
     // Panel Activation Logic
     let panelsElement = document.querySelectorAll('.panel');
 
@@ -167,3 +188,28 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
     wrapper.addEventListener("mouseleave", autoPlay);
 });
+document.addEventListener('scroll', function() {
+    var scrollToTopButton = document.querySelector('.scroll-to-top');
+    
+    if (window.scrollY > 100) { // Show the button after scrolling down 100px
+      scrollToTopButton.classList.add('show');
+    } else {
+      scrollToTopButton.classList.remove('show');
+    }
+
+//     function previewCV() {
+//     var iframe = document.getElementById('cv-iframe');
+//     iframe.style.display = 'block'; // Show the iframe
+
+//     // Open the CV in a new window for viewing and printing
+//     var newWindow = window.open(iframe.src, '_blank');
+//     newWindow.focus();
+// }
+
+function printCV() {
+    const printWindow = window.open('assets/img/cv_file/Resume-Acierto (updated).docx', '_blank');
+    printWindow.print();
+}
+
+  });
+  

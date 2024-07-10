@@ -569,22 +569,22 @@ body {
 
     /* Close button (X) styles */
     .close-btn {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: var(--tertiary-color);
-        border-radius: 25%;
-        width: 40px; /* Adjust size as needed */
-        height: 40px; /* Ensure height matches width for a perfect square */
-        border: none;
-        font-size: 1.5em;
-        cursor: pointer;
-        color: var(--secondary-color);
-        transition: color 0.3s ease;
-        z-index: 1002; /* Ensure close button is above the menu */
-    }
-
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none; /* Remove background color */
+      border-radius: 25%;
+      width: 40px; /* Adjust size as needed */
+      height: 40px; /* Ensure height matches width for a perfect square */
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: var(--secondary-color);
+      transition: color 0.3s ease;
+      z-index: 1002; /* Ensure close button is above the menu */
+  }
+  
     /* Hamburger icon styles */
     .hamburger {
         display: block;
@@ -1044,3 +1044,28 @@ z-index: 1;
   padding: 15px;
   margin: 10px;
 }
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px; /* Set the width */
+  height: 50px; /* Set the height */
+
+ 
+  color: var(--tertiary-color);
+
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+
+.scroll-to-top i {
+  font-size: 2.5rem;
+  transition: 0.3 ease-in-out;
+}
+

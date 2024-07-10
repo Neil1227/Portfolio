@@ -72,8 +72,9 @@
                 <a href="#"><i class="fab fa-viber"></i></a>
             </div></p>
 
-            <button class="btn-button btn btn-main">Preview CV</button>
-            
+            <button class="btn-button btn btn-main" onclick="printCV()">Preview CV</button>
+            <!-- <iframe id="cv-iframe" src="assets/img/cv_file/Resume-Acierto (updated).docx" style="display: none;"></iframe> Hidden iframe for CV -->
+        <!-- modal -->
         </div>
     </section>
     
@@ -125,47 +126,47 @@
                             <i id="left" class="fa-solid fa-angle-left left"></i>
                             <ul class="carousel">
                               <li class="card">
-                                <div class="img"><img src="assets/img/icons/html.png" alt="img" draggable="false"></div>
+                                <div class="img"><img src="/assets/img/icons/html.png" alt="img" draggable="false"></div>
                                 <h2>HTML</h2>
                                 <span>Markup Language</span>
                               </li>
                               <li class="card">
-                                <div class="img"><img src="assets/img/icons/css-3.png" alt="img" draggable="false"></div>
+                                <div class="img"><img src="/assets/img/icons/css-3.png" alt="img" draggable="false"></div>
                                 <h2>CSS</h2>
                                 <span> Stylesheet Language</span>
                               </li>
                               <li class="card">
-                                <div class="img"><img src="assets/img/icons/js.png" alt="img" draggable="false"></div>
+                                <div class="img"><img src="/assets/img/icons/js.png" alt="img" draggable="false"></div>
                                 <h2>JavaScript</h2>
                                 <span>Programming Language</span>
                               </li>
                               <li class="card">
-                                <div class="img"><img src="assets/img/icons/web.png" alt="img" draggable="false"></div>
+                                <div class="img"><img src="/assets/img/icons/web.png" alt="img" draggable="false"></div>
                                 <h2>PHP</h2>
                                 <span>Server-side Scripting Language</span>
                               </li>
                               <li class="card">
-                                <div class="img"><img src="assets/img/icons/mysql2.png" alt="img" draggable="false"></div>
+                                <div class="img"><img src="/assets/img/icons/mysql2.png" alt="img" draggable="false"></div>
                                 <h2>MySQL</h2>
                                 <span>Database Management System</span>
                               </li>
                               <li class="card">
-                                <div class="img"><img src="assets/img/icons/java.png" alt="img" draggable="false"></div>
+                                <div class="img"><img src="/assets/img/icons/java.png" alt="img" draggable="false"></div>
                                 <h2>Java</h2>
                                 <span>Programming Language</span>
                               </li>
                               <li class="card">
-                                <div class="img"><img src="assets/img/icons/python.png" alt="img" draggable="false"></div>
+                                <div class="img"><img src="/assets/img/icons/python.png" alt="img" draggable="false"></div>
                                 <h2>Python</h2>
                                 <span>Programming Language</span>
                               </li>
                               <li class="card">
-                                <div class="img"><img src="assets/img/icons/wordpress.png" alt="img" draggable="false"></div>
+                                <div class="img"><img src="/assets/img/icons/wordpress.png" alt="img" draggable="false"></div>
                                 <h2>Wordpress</h2>
                                 <span>Content Management System</span>
                               </li>
                               <li class="card">
-                                <div class="img"><img src="assets/img/icons/bootstrap.png" alt="img" draggable="false"></div>
+                                <div class="img"><img src="/assets/img/icons/bootstrap.png" alt="img" draggable="false"></div>
                                 <h2>Bootstrap</h2>
                                 <span> Front-end Framework</span>
                               </li>
@@ -217,7 +218,7 @@
                         <span class="title">McDonald's Magalang </span>
                         <span>2021-2024</span>
                     </div>
-                    <p>San Nicolas II, Magalang, Pampanga</p>
+                    <p> Brgy. San Nicolas II, Magalang, Pampanga</p>
                     <div class="bottom">
                         <a href="#"  class="view-location-btn">Visit</a>
                         <i>Service crew</i>
@@ -277,6 +278,12 @@
   <div id="preloader">
     <div class="spinner"></div>
 </div>
+<!-- Add this before the closing body tag -->
+<a href="#" class="scroll-to-top">
+    <div class="icon-container">
+        <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+    </div>
+</a>
 
     <script src="script.js"></script>
 
