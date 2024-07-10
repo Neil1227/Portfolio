@@ -197,8 +197,6 @@ document.addEventListener('scroll', function() {
       scrollToTopButton.classList.remove('show');
     }
 
-    function openPDF() {
-        window.open('assets/img/cv_file/Resume-Acierto (updated).pdf', '_blank');
-    }
+
   });
   

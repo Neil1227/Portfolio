@@ -1033,7 +1033,7 @@ z-index: 1;
 }
 
 .card-text {
-    padding: 10px;
+    padding: 0px 25px;
     font-size: 1rem;
 }
 
@@ -1068,4 +1068,3 @@ z-index: 1;
   font-size: 2.5rem;
   transition: 0.3 ease-in-out;
 }
-
