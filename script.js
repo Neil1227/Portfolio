@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    typeWriter();
+    // Delay before starting the typewriter effect
+    setTimeout(typeWriter, 2000); // 2-second delay
 
     // Hamburger menu functionality
     const hamburger = document.getElementById('hamburger');

@@ -16,56 +16,97 @@ body {
     margin: 0;
     padding: 0;
 }
-        /* Preloader styles */
-        #preloader {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          z-index: 9999;
-          transition: opacity 0.5s ease-out;
-      }
+    /* Chart container */
+    .chart-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+  }
 
-      #preloader.hidden {
-          opacity: 0;
-          pointer-events: none;
-      }
+  /* Semi-circle ring base style */
+  .semi-circle-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 5px solid transparent;
+      transform-origin: center;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+  }
 
-      .spinner {
-          width: 100px;
-          height: 100px;
-          border: 10px solid transparent;
-          border-top: 10px solid #3498db;
-          border-right: 10px solid #f39c12;
-          border-bottom: 10px solid #e74c3c;
-          border-left: 10px solid #2ecc71;
-          border-radius: 50%;
-          animation: spin 1.5s linear infinite, colorchange 6s linear infinite;
-      }
+  /* Outer semi-circle ring style */
+  .outer-ring {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border-color: #DC5F00;
+      animation: rotate-outer-ring 5s linear infinite;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 80%, 0% 100%);
+  }
 
-      @keyframes spin {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-      }
+  /* Inner semi-circle ring style */
+  .inner-ring {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      border-color: #373A40;
+      animation: rotate-inner-ring 5s linear infinite;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 80%, 0% 100%);
+  }
 
-      @keyframes colorchange {
-          0% { border-top-color: #3498db; border-right-color: #f39c12; border-bottom-color: #e74c3c; border-left-color: #2ecc71; }
-          25% { border-top-color: #f39c12; border-right-color: #e74c3c; border-bottom-color: #2ecc71; border-left-color: #3498db; }
-          50% { border-top-color: #e74c3c; border-right-color: #2ecc71; border-bottom-color: #3498db; border-left-color: #f39c12; }
-          75% { border-top-color: #2ecc71; border-right-color: #3498db; border-bottom-color: #f39c12; border-left-color: #e74c3c; }
-          100% { border-top-color: #3498db; border-right-color: #f39c12; border-bottom-color: #e74c3c; border-left-color: #2ecc71; }
+  @keyframes rotate-outer-ring {
+      0% {
+          transform: rotate(0deg);
       }
-
-      /* Hide the preloader after the page has loaded */
-      body.loaded #preloader {
-          display: none;
+      100% {
+          transform: rotate(360deg);
       }
+  }
 
+  @keyframes rotate-inner-ring {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(-360deg);
+      }
+  }
+          /* Preloader styles */
+          #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--secondary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
 .hero {
     position: relative; /* Needed for the overlay */
     background: url('assets/img/neil.png') no-repeat center center;
@@ -1071,4 +1112,16 @@ z-index: 1;
 .scroll-to-top i {
   font-size: 2.5rem;
   transition: 0.3 ease-in-out;
+}
+
+.tech{
+  margin: 0px 20px;
+}
+
+
+.footer {
+
+
+  width: 100%;
+
 }
