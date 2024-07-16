@@ -1,13 +1,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     const typewriterElement = document.querySelector('.typewriter');
-    const typewriterText = "Web Developer."; // Changed to a single string since there's only one text
+    const texts = ["Web Developer.", "IT Support Specialist."]; // Array of texts to loop through
     let charIndex = 0;
+    let textIndex = 0;
+    let isErasing = false;
 
     function typeWriter() {
-        if (charIndex < typewriterText.length) {
-            typewriterElement.innerHTML += `<span style="color: #DC5F00;">${typewriterText.charAt(charIndex)}</span>`;
+        const currentText = texts[textIndex];
+
+        if (!isErasing && charIndex < currentText.length) {
+            typewriterElement.innerHTML = `<span style="color: #DC5F00;">${currentText.substring(0, charIndex + 1)}</span>`;
             charIndex++;
             setTimeout(typeWriter, 200); // Typing speed
+        } else if (isErasing && charIndex > 0) {
+            typewriterElement.innerHTML = `<span style="color: #DC5F00;">${currentText.substring(0, charIndex - 1)}</span>`;
+            charIndex--;
+            setTimeout(typeWriter, 100); // Erasing speed
+        } else if (!isErasing && charIndex === currentText.length) {
+            setTimeout(() => {
+                isErasing = true;
+                setTimeout(typeWriter, 100); // Start erasing
+            }, 2000); // Delay before starting to erase
+        } else if (isErasing && charIndex === 0) {
+            isErasing = false;
+            textIndex = (textIndex + 1) % texts.length; // Switch to the next text
+            setTimeout(typeWriter, 500); // Delay before starting to type the new text
         }
     }
 
@@ -44,13 +61,11 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.classList.remove('show');
         });
     });
-    
+
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
-   
-   
+
     // Scroll-to-top button functionality
     const scrollToTopBtn = document.querySelector('.scroll-to-top');
     
@@ -189,6 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
     wrapper.addEventListener("mouseleave", autoPlay);
 });
+
 document.addEventListener('scroll', function() {
     var scrollToTopButton = document.querySelector('.scroll-to-top');
     
@@ -197,7 +213,32 @@ document.addEventListener('scroll', function() {
     } else {
       scrollToTopButton.classList.remove('show');
     }
+});
 
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
 
-  });
-  
+    if (currentTheme) {
+        document.documentElement.classList.toggle('dark-mode', currentTheme === 'dark');
+    }
+
+    updateIcons();
+
+    themeToggleBtn.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark-mode');
+        const theme = document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+        location.reload(); // Reload the page to apply the new theme
+    });
+
+    function updateIcons() {
+        if (document.documentElement.classList.contains('dark-mode')) {
+            themeToggleBtn.querySelector('.bi-lightbulb').style.display = 'inline';
+            themeToggleBtn.querySelector('.bi-lightbulb-off').style.display = 'none';
+        } else {
+            themeToggleBtn.querySelector('.bi-lightbulb').style.display = 'none';
+            themeToggleBtn.querySelector('.bi-lightbulb-off').style.display = 'inline';
+        }
+    }
+});
