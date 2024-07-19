@@ -602,6 +602,7 @@ body {
     .hero {
         position: relative; /* Needed for the overlay */
         background: url('assets/img/cropped-neil.png') no-repeat center center;
+
         background-size: cover;
         max-width: 100%;
         height: 100dvh;
@@ -611,11 +612,6 @@ body {
         text-align: left;
         color: var(--secondary-color);
     }
-    @supports (-webkit-appearance: none) {
-    .hero {
-        background-attachment: scroll; /* Fallback for Safari */
-    }
-}
 
     .hero-content{
       margin-top: 30dvh;
@@ -1240,4 +1236,40 @@ i.fa-solid {
   background-color: var(--tertiary-color); 
   border-color: var(--tertiary-color);
   color: var(--secondary-color); /* Change this if you want a different text color on hover */
+}
+/* Modal styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 50%;
+  top: 15%; /* Adjust this value to position the modal lower or higher */
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 500px;
+
+}
+
+.modal-content {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border: 1px solid var;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+  color: var(--tertiary-color);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
 }

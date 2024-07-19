@@ -36,15 +36,41 @@
 
     emailjs.send("service_ncfgqij", "template_stskj96", params)
       .then(() => {
-        alert("Email Sent!");
+        showModal();
       })
       .catch((error) => {
         console.error("Failed to send email: ", error);
       });
   }
+
+  function showModal() {
+    let modal = document.getElementById("emailModal");
+    let span = document.getElementsByClassName("close")[0];
+
+    modal.style.display = "block";
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
 </script>
+
   </head>
   <body>
+    <!-- Modal structure -->
+<div id="emailModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Email Sent Successfully!</p>
+  </div>
+</div>
+
     <nav class="navbar">
       <div class="container">
         <div class="logo">
