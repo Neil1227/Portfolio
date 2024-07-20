@@ -1273,3 +1273,11 @@ i.fa-solid {
   color: black;
   text-decoration: none;
 }
+
+/* Ensure AOS animations don't affect layout on small screens */
+@media (max-width: 767px) {
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
+}
