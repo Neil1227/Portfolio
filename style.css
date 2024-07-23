@@ -256,8 +256,8 @@ body {
 
 .menu-item:hover span {
     left: 0;
+    color: var(--secondary-color);
 }
-
 .menu-item a::after {
     content: '';
     display: block;
