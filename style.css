@@ -4,7 +4,7 @@
     --card-color: #ffffff; 
     --border-color: #38444D;
     --secondary-color: #eeeeee; /* Light beige */
-    --body-color: #f1f1f1; /* Dark green */
+    --body-color: #e2e2e2; /* Dark green */
     --tertiary-color: #DC5F00; /* Darker green */
     --btn-bg-hover-color: #f37e24; /* Darker green */
     --font: 'Ubuntu';
@@ -349,7 +349,7 @@ body {
 }
 
 .section {
-    padding: 10px 30px 10px 30px;
+    padding: 110px 30px 0px 30px;
 }
 
 .about-section .about-content h2,
@@ -383,7 +383,7 @@ body {
 
 .education-page {
   margin: 0 auto;
-  height: 85dvh;
+  height: 50dvh;
 }
 
 .educ-row {
@@ -484,7 +484,7 @@ body {
     color: var(--secondary-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     /* Menu container styles */
     .overlay {
         position: absolute;
@@ -627,6 +627,9 @@ body {
 
     .hero-content p {
         font-size: 1rem;
+    }
+    .section {
+        padding: 50px 30px 50px 30px;
     }
     .social-icons {
         position: relative;
@@ -796,7 +799,7 @@ body {
 
   .container-educ .center-line {
     position: absolute;
-    height: 60%;
+    height: 65dvh;
     width: 4px;
     background: var( --primary-color);
     left: 50%;
@@ -909,9 +912,12 @@ body {
   }
   
   @media  screen and (max-width: 991px) {
+    .container-educ{
+      position: relative;
+    }
     .container-educ .center-line {
       position: absolute;
-      height: 80%;
+      height: 85dvh;
       width: 4px;
       background: var( --primary-color);
       left: 50%;
@@ -922,8 +928,8 @@ body {
   /* Responsive Code */
   @media screen and (max-width: 790px) {
     .container-educ .center-line {
-      left: 62px;
-      height: 65%;
+      left: 32px;
+      height: 70dvh;
     }
   
     .container-educ .row-educ {
@@ -1332,3 +1338,39 @@ input:checked + .slider {
 input:checked + .slider::before {
   transform: translateX(18px); /* Adjust based on width */
 }
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.bento-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+}
+
+.bento-img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.bento-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.bento-card p {
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+}
+
