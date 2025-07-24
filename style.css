@@ -799,7 +799,7 @@ body {
 
   .container-educ .center-line {
     position: absolute;
-    height: 65dvh;
+    height: 100%;
     width: 4px;
     background: var( --primary-color);
     left: 50%;
@@ -917,7 +917,7 @@ body {
     }
     .container-educ .center-line {
       position: absolute;
-      height: 85dvh;
+      height: 100%;
       width: 4px;
       background: var( --primary-color);
       left: 50%;
@@ -929,7 +929,7 @@ body {
   @media screen and (max-width: 790px) {
     .container-educ .center-line {
       left: 32px;
-      height: 70dvh;
+      height: 100%;
     }
   
     .container-educ .row-educ {
@@ -1374,3 +1374,16 @@ input:checked + .slider::before {
   margin-top: 0.75rem;
 }
 
+.disabled-card {
+  pointer-events: none;
+  opacity: 0.6;
+  position: relative;
+}
+
+.disabled-card .overlay {
+  background-color: rgba(0, 0, 0, 0.4); /* darker overlay */
+}
+
+.disabled-link {
+  cursor: not-allowed;
+}
