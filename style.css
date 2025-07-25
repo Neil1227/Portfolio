@@ -1,33 +1,58 @@
-:root {
-    --primary-color: #15202B; /* Dark green */
-    --navbar-color: #15202B; /* Dark green */
+/* :root {
+    --primary-color: #15202B; 
+    --navbar-color: #15202B; 
     --card-color: #ffffff; 
     --border-color: #38444D;
-    --secondary-color: #eeeeee; /* Light beige */
-    --body-color: #e2e2e2; /* Dark green */
-    --tertiary-color: #DC5F00; /* Darker green */
-    --btn-bg-hover-color: #f37e24; /* Darker green */
+    --secondary-color: #eeeeee; 
+    --body-color: #e2e2e2; 
+    --tertiary-color: #DC5F00; 
+    --btn-bg-hover-color: #f37e24; 
     --font: 'Ubuntu';
     --cb: cubic-bezier(.05, .61, .41, .95);
-}
-/* Dark Theme */
-:root.dark-mode {
-  --primary-color: #f1f1f1; /* Light beige */
-  --navbar-color: #15202B;
+} */
+/* Dark Theme add this-> on root below if what to revert back .dark-mode */
+:root {
+  --primary-color: #f1f1f1; 
+  --navbar-color: #131d27;
   --card-color: #263849; 
   --border-color: #38444D;
-  --secondary-color: #f1f1f1; /* Dark green */
-  --body-color: #192734; /* Dark green */
-  --tertiary-color: #DC5F00; /* Darker green */
-  --btn-bg-hover-color: #f37e24; /* Dark green */
+  --secondary-color: #f1f1f1; 
+  --body-color: #192734; 
+  --tertiary-color: #DC5F00; 
+  --btn-bg-hover-color: #f37e24; 
+      --font: 'Ubuntu';
+    --cb: cubic-bezier(.05, .61, .41, .95);
 }
 body {
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+  color: var(--primary-color);
+  background: url('assets/img/download.jpg') center/cover no-repeat fixed;
+  /* OR use a gradient: */
+  /* background: linear-gradient(135deg, #e2e2e2, #cfcfcf); */
+}
+/* Blurred background layer */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('assets/img/download.jpg') center/cover no-repeat;
+  filter: blur(10px);  /* This actually blurs the background */
+  z-index: -1;
+  transform: scale(1.1); /* Prevent edge clipping from blur */
+}
+/* body {
     font-family: var(--font);
     background-color: var(--body-color);
     margin: 0;
     padding: 0;
     color: var(--primary-color);
-}
+} */
+
     /* Chart container */
     .chart-container {
       position: absolute;
@@ -39,6 +64,8 @@ body {
       justify-content: center;
       align-items: center;
   }
+
+
   h2, .h5, span {
     color: var(--primary-color);
   }
@@ -123,10 +150,7 @@ body {
             pointer-events: none;
         }
 .hero {
-    position: relative; /* Needed for the overlay */
-    background: url('assets/img/neil.png') no-repeat center center;
-    background-attachment: fixed; /* Parallax effect */
-    background-size: cover;
+    position: relative; 
     height: 100dvh;
     display: flex;
     justify-content: center;
@@ -136,14 +160,16 @@ body {
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Adjust the transparency as needed */
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.8);  */
+  filter: blur(10px); 
+  z-index: -1;
 }
+
 
 .hero-content {
     position: relative;
@@ -496,15 +522,15 @@ body {
 
 @media (max-width: 992px) {
     /* Menu container styles */
-    .overlay {
+    /* .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8); /* Adjust the transparency as needed */
+        background: rgba(0, 0, 0, 0.8); 
     
-    }
+    } */
     .navbar .logo {
 
       display: flex;
@@ -614,7 +640,7 @@ body {
 
     .hero {
         position: relative; /* Needed for the overlay */
-        background: url('assets/img/cropped-neil.png') no-repeat center center;
+        /* background: url('assets/img/cropped-neil.png') no-repeat center center; */
 
         background-size: cover;
         max-width: 100%;
@@ -809,7 +835,7 @@ body {
 
   .container-educ .center-line {
     position: absolute;
-    height: 100%;
+    height: 130%;
     width: 4px;
     background: var( --primary-color);
     left: 50%;

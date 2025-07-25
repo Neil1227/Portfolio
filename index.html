@@ -125,10 +125,10 @@
               <span>Contact</span>
             </div>
           </a>
-          <label class="theme-switch">
+          <!-- <label class="theme-switch">
             <input type="checkbox" id="toggle-theme">
             <span class="slider"></span>
-          </label>
+          </label> -->
           
           <!-- <button id="theme-toggle" class="theme-toggle-btn"><i class="fas fa-moon"></i></button> -->
         </div>
@@ -136,6 +136,7 @@
       </div>
     </nav>
     <section class="hero" id="home" data-aos="fade" data-aos-duration="1000"data-aos-delay="300">
+      <!-- <div class="blur-bg"></div> -->
       <div class="overlay"></div>
       <div class="hero-content">
         <h1>Welcome! It's <strong style="font-weight: bold;">Neil,</strong>
@@ -174,12 +175,22 @@
         </h1>
         <hr class="hr" data-aos="fade-right" data-aos-duration="1000"data-aos-delay="500">
         <div class="row">
-          <div class="col-md-4 mt-3 mb-3" data-aos="fade-up" data-aos-duration="1000"data-aos-delay="300">
-            <div class=" about-card ">
-              <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                <img src="assets/img/icons/ACIERTO NEIL PATRICK0009-Photoroom.png" alt="img" class="img-fluid about-img" style="max-width: 90%;  border-radius: 50%;">
+          <div class="col-md-4 mt-3 mb-3 active" data-aos="fade-up" data-aos-duration="1000"data-aos-delay="300">
+            <div class="card about-card">
+              <!-- Add 'active-card' class to make it larger by default -->
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Professional<span class="hl-text"> Summary</span></h3>
+                <hr class="hr" data-aos="fade-right" data-aos-duration="1000"data-aos-delay="500">
+                  <canvas id="languageChart" width="300" height="300"></canvas>
+
+                  
+
               </div>
-            </div>
+        </div>
+              <!-- <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <img src="assets/img/icons/ACIERTO NEIL PATRICK0009-Photoroom.png" alt="img" class="img-fluid about-img" style="max-width: 90%;  border-radius: 50%;">
+              </div> -->
+            
           </div>
           <div class="col-md-4 mt-3 mb-3 active"data-aos="fade-up" data-aos-duration="1000"data-aos-delay="500">
             <div class="card about-card">
@@ -190,7 +201,7 @@
                 <p>
                   I'm a BSIT graduate with a strong foundation in web development and a growing interest in AI-powered tools. I enjoy creating responsive, user-friendly websites and continually learning new technologies to improve my craft. My projects reflect my commitment to innovation, usability, and clean code.
                 </p>
-            <div class="row">
+            <div class="row mt-3">
               <h5>GitHub<span class="hl-text"> Contribution</span>: </h5>
               <div class="col-md-12">
                 <img src="https://github-readme-stats.vercel.app/api?username=Neil1227&show_icons=true&theme=github_dark&hide_title=true" class="img-fluid rounded shadow-sm">
@@ -207,35 +218,43 @@
           <div class="col-md-4 mt-3 mb-3 muted"data-aos="fade-up" data-aos-duration="1000"data-aos-delay="600">
             <div class="card about-card">
               <div class="card-body d-flex flex-column">
-                <h3 class="card-title">AI in <span class="hl-text">Web Development</span></h3>
+                <h3 class="card-title">Ai in <span class="hl-text">Web Development</span></h3>
                 <hr class="hr" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
                 <p class=" about-ai mb-3">
-                  AI tools have transformed how modern websites are built, optimized, and maintained. Here's how AI is utilized:
+                 AI tools are reshaping how modern websites are built, optimized, and maintained. Here's how AI is utilized:
                 </p>
 
                 <!-- AI Tool 1 -->
                 <div class="d-flex align-items-center mb-3">
-                  <img src="/assets/img/gpt.png" alt="ChatGPT Logo" width="30" height="30" class="me-3 ai-icon">
-                  <p class=" about-ai mb-0">ChatGPT assists with coding, debugging, and answering development queries instantly.</p>
+                  <img src="assets/img/gpt.png" alt="ChatGPT Logo" width="30" height="30" class="me-3 ai-icon">
+                  <p class=" about-ai mb-0">ChatGPT instantly helps with coding, debugging, and dev queries.</p>
+                </div>
+
+              <!-- AI Tool 1.2 -->
+                <div class="d-flex align-items-center mb-3">
+                  <img src="assets/img/claudeai.png" alt="Claude AI Logo" width="30" height="30" class="me-3 ai-icon">
+                  <p class="about-ai mb-0">
+                    Claude AI is a powerful alternative for coding, writing, and content analysis.
+                  </p>
                 </div>
 
                 <!-- AI Tool 2 -->
                 <div class="d-flex align-items-center mb-3">
-                  <img src="/assets/img/copilot.png" alt="Microsoft Copilot Logo" width="30" height="30" class="me-3 ai-icon">
-                  <p class=" about-ai mb-0">Microsoft Copilot generates code suggestions and improves productivity in IDEs.</p>
+                  <img src="assets/img/copilot.png" alt="Microsoft Copilot Logo" width="30" height="30" class="me-3 ai-icon">
+                  <p class=" about-ai mb-0">Microsoft Copilot generates code suggestions and improved IDE productivity</p>
                 </div>
 
                 <!-- AI Tool 4 -->
                 <div class="d-flex align-items-center mb-3">
-                  <img src="/assets/img/grammarly.png" alt="Grammarly Logo" width="30" height="30" class="me-3 ai-icon">
+                  <img src="assets/img/grammarly.png" alt="Grammarly Logo" width="30" height="30" class="me-3 ai-icon">
                   <p class=" about-ai mb-0">Grammarly ensures content clarity and correctness on web pages and blog sections.</p>
                 </div>
 
                 <!-- AI Tool 5 -->
               <div class="d-flex align-items-center mb-3">
-                <img src="/assets/img/lovable.png" alt="Lovable.dev Logo" width="30" height="30" class="me-3 ai-icon">
+                <img src="assets/img/lovable.png" alt="Lovable.dev Logo" width="30" height="30" class="me-3 ai-icon">
                   <p class=" about-ai mb-0">
-                    Lovable.dev offers AI-driven UI design ideas to speed up modern interface creation.
+                    Lovable.dev offers AI-powered UI ideas for fast, modern designs.
                   </p>
               </div>
 
@@ -352,17 +371,17 @@
         <div class="education-page mt-5">
           <div class="educ-container">
             <div class="row educ-row"  data-aos="fade-up" data-aos-duration="1000"data-aos-delay="500">
-              <img src="assets/img/icons/MI-Photoroom .png" class="educ-img" alt="img">
-              <div class="educ-text">
-                <h2>Magalang Institute Corp.</h2>
-                <p>HUMSS <br> 2014-2020 </p>
-              </div>
-            </div>
-            <div class="row educ-row"  data-aos="fade-up" data-aos-duration="1000"data-aos-delay="600">
               <img src="assets/img/icons/PSAU-Photoroom.png" class="educ-img" alt="img">
               <div class="educ-text">
                 <h2>Pampanga State <br>Agricultural University </h2>
                 <p> BSIT <br> 2020-2024 </p>
+              </div>
+            </div>
+            <div class="row educ-row"  data-aos="fade-up" data-aos-duration="1000"data-aos-delay="600">
+              <img src="assets/img/icons/MI-Photoroom .png" class="educ-img" alt="img">
+              <div class="educ-text">
+                <h2>Magalang Institute Corp.</h2>
+                <p>HUMSS <br> 2014-2020 </p>
               </div>
             </div>
           </div>
@@ -766,7 +785,7 @@
     })
   });
 </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
