@@ -215,88 +215,105 @@ document.addEventListener('scroll', function() {
     }
 });
 //js for 
-  const username = "Neil1227";
+const username = "Neil1227";
+const token = "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"; // remember: keep this private in real use
 
-  async function fetchLanguageStats() {
-    try {
-      const repoRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`);
-      const repos = await repoRes.json();
-      console.log("Fetched repos:", repos);
-
-      const languageTotals = {};
-
-      for (const repo of repos) {
-        const langRes = await fetch(repo.languages_url);
-        const langData = await langRes.json();
-
-        for (const [lang, bytes] of Object.entries(langData)) {
-          languageTotals[lang] = (languageTotals[lang] || 0) + bytes;
-        }
+async function fetchLanguageStats() {
+  try {
+    const repoRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
+      headers: {
+        Authorization: `token ${token}`
       }
+    });
 
-      const labels = Object.keys(languageTotals);
-      const data = Object.values(languageTotals);
+    const repos = await repoRes.json();
 
-      const languageColors = {
-        JavaScript: '#f1e05a',
-        HTML: '#e34c26',
-        CSS: 'teal',
-        PHP: '#4F5B93',
-        Python: '#3572A5',
-        Java: '#b07219',
-        TypeScript: '#2b7489',
-        Shell: '#89e051',
-        C: '#555555',
-        Blade: '#DC3545',
-        Vue: '#41B883',
-        SCSS: '#cd6799',
-        Other: '#cccccc'
-      };
+    if (!Array.isArray(repos)) {
+      console.error("GitHub API error:", repos.message);
+      return;
+    }
 
-      const colors = labels.map(lang => languageColors[lang] || languageColors['Other']);
+    const languageTotals = {};
 
-      const ctx = document.getElementById("languageChart").getContext("2d");
-      new Chart(ctx, {
-        type: "doughnut",
-        data: {
-          labels: labels,
-          datasets: [{
-            label: "Languages Used",
-            data: data,
-            backgroundColor: colors
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: {
-              position: "bottom",
-              labels: {
-                color: "#ffffff",
-                boxWidth: 12,
-                padding: 16,
-                textAlign: "left",
-                usePointStyle: true
-              }
-            },
-            tooltip: {
-              bodyColor: "#ffffff",
-              titleColor: "#ffffff"
-            }
-          },
-          layout: {
-            padding: {
-              top: 30
-            }
-          }
+    for (const repo of repos) {
+      const langRes = await fetch(repo.languages_url, {
+        headers: {
+          Authorization: `token ${token}`
         }
       });
-    } catch (err) {
-      console.error("Error fetching data:", err);
-    }
-  }
+      const langData = await langRes.json();
 
-  document.addEventListener("DOMContentLoaded", fetchLanguageStats);
+      for (const [lang, bytes] of Object.entries(langData)) {
+        languageTotals[lang] = (languageTotals[lang] || 0) + bytes;
+      }
+    }
+
+    const labels = Object.keys(languageTotals);
+    const data = Object.values(languageTotals);
+
+    const languageColors = {
+      JavaScript: '#f1e05a',
+      HTML: '#e34c26',
+      CSS: 'teal',
+      PHP: '#4F5B93',
+      Python: '#3572A5',
+      Java: '#b07219',
+      TypeScript: '#2b7489',
+      Shell: '#89e051',
+      C: '#555555',
+      Blade: '#DC3545',
+      Vue: '#41B883',
+      SCSS: '#cd6799',
+      Other: '#cccccc'
+    };
+
+    const colors = labels.map(lang => languageColors[lang] || languageColors['Other']);
+
+    const ctx = document.getElementById("languageChart").getContext("2d");
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: labels,
+        datasets: [{
+          label: "Languages Used",
+          data: data,
+          backgroundColor: colors
+        }]
+      },
+options: {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: "bottom",
+      labels: {
+        color: "#ffffff",
+        usePointStyle: true,   // 👈 required for circular legends
+        pointStyle: 'circle',
+        boxWidth: 10,
+        boxHeight: 10
+      }
+      
+    },
+    tooltip: {
+      bodyColor: "#ffffff",
+      titleColor: "#ffffff"
+    }
+  },
+  layout: {
+    padding: 10
+  }
+}
+
+
+    });
+  } catch (err) {
+    console.error("Error fetching data:", err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", fetchLanguageStats);
+
+
                   
 //for dark mode js
 // document.addEventListener('DOMContentLoaded', () => {

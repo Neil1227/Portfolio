@@ -1187,32 +1187,33 @@ body::before {
     background-color: var(--secondary-color );
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 10px;
     margin: 10px;
     position: relative;
 }
 
-.inner-card .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.overlay-eye {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
 }
 
-.overlay i {
-    color: var(--secondary-color);
-    font-size: 2rem;
+.inner-card:hover .overlay-eye {
+  opacity: 1;
 }
 
-.card-proj:hover .overlay {
-    opacity: 1;
+.overlay-eye i {
+  color: var(--secondary-color);
+  font-size: 2rem;
 }
 
 .scroll-to-top {
