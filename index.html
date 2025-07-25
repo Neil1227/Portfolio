@@ -13,7 +13,7 @@
     <link href="assets/aos/aos.css" rel="stylesheet">
     <script src="assets/aos/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <script type="text/JS">
        (function(){
           emailjs.init("g06b0BheOGTRz2xpi");
        })();
@@ -163,7 +163,7 @@
         <button class="btn-button btn btn-main" onclick="openPDF()">Preview CV</button>
         <script>
           function openPDF() {
-            window.open('assets/img/cv_file/Resume-Acierto-Neil-Patrick.pdf', '_blank');
+            window.open('assets/img/cv_file/LATEST_2025_Resume-Acierto-Neil-Patrick.pdf', '_blank');
           }
         </script>
       </div>
@@ -185,26 +185,49 @@
             <div class="card about-card">
               <!-- Add 'active-card' class to make it larger by default -->
               <div class="card-body d-flex flex-column">
-                <h3 class="card-title">Personal <span class="hl-text"> Information</span></h3>
+                <h3 class="card-title">Professional<span class="hl-text"> Summary</span></h3>
                 <hr class="hr" data-aos="fade-right" data-aos-duration="1000"data-aos-delay="500">
-                <p class="card-text line-spacing">
-                    <strong>Name:</strong>Neil Patrick G. Acierto <br>
-                    <strong>Degree:</strong>BSIT <br>
-                    <strong>Age:</strong>23 years old <br>
-                    <strong>Address:</strong>Magalang, Pampanga <br>
-                    <strong>Date of Birth:</strong>Dec. 27, 2001 <br>
-                    <strong>Place of Birth:</strong>Angeles City, Pampanga <br>
-                    <strong>Height:</strong>5’4 <br>
+                <p>
+                  I'm a BSIT graduate with a strong foundation in web development and a growing interest in AI-powered tools. I enjoy creating responsive, user-friendly websites and continually learning new technologies to improve my craft. My projects reflect my commitment to innovation, usability, and clean code.
                 </p>
             </div>
             </div>
           </div>
           <div class="col-md-4 mt-3 mb-3 muted"data-aos="fade-up" data-aos-duration="1000"data-aos-delay="600">
             <div class="card about-card">
-              <div class="card-body d-flex flex-column ">
-                <h3 class="card-title">Values and <span class="hl-text">Philosophy</span> </h3>
-                <hr class="hr" data-aos="fade-right" data-aos-duration="1000"data-aos-delay="500">
-                <p class="card-text">I believe in the power of persistence and continuous improvement. I am committed to delivering high-quality work and always striving to exceed expectations. Collaboration, integrity, and innovation are the core values that guide me.</p>
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">AI in <span class="hl-text">Web Development</span></h3>
+                <hr class="hr" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+                <p class="mb-3">
+                  AI tools have transformed how modern websites are built, optimized, and maintained. Here's how AI is utilized:
+                </p>
+
+                <!-- AI Tool 1 -->
+                <div class="d-flex align-items-center mb-3">
+                  <img src="/assets/img/gpt.png" alt="ChatGPT Logo" width="30" height="30" class="me-3 ai-icon">
+                  <p class="mb-0">ChatGPT assists with coding, debugging, and answering development queries instantly.</p>
+                </div>
+
+                <!-- AI Tool 2 -->
+                <div class="d-flex align-items-center mb-3">
+                  <img src="/assets/img/copilot.png" alt="Microsoft Copilot Logo" width="30" height="30" class="me-3 ai-icon">
+                  <p class="mb-0">Microsoft Copilot generates code suggestions and improves productivity in IDEs.</p>
+                </div>
+
+                <!-- AI Tool 4 -->
+                <div class="d-flex align-items-center mb-3">
+                  <img src="/assets/img/grammarly.png" alt="Grammarly Logo" width="30" height="30" class="me-3 ai-icon">
+                  <p class="mb-0">Grammarly ensures content clarity and correctness on web pages and blog sections.</p>
+                </div>
+
+                <!-- AI Tool 5 -->
+              <div class="d-flex align-items-center mb-3">
+                <img src="/assets/img/lovable.png" alt="Lovable.dev Logo" width="30" height="30" class="me-3 ai-icon">
+                  <p class="mb-0">
+                    Lovable.dev offers AI-driven UI design ideas to speed up modern interface creation.
+                  </p>
+              </div>
+
               </div>
             </div>
           </div>
@@ -235,7 +258,7 @@
                   <div class="img">
                     <img src="assets/img/icons/js.png" alt="img" draggable="false">
                   </div>
-                  <h2>JavaScript</h2>
+                  <h2>JS</h2>
                   <span>Programming Language</span>
                 </li>
                 <li class="card">
@@ -419,8 +442,17 @@
         <hr class="hr" data-aos="fade-right" data-aos-duration="1000"data-aos-delay="500">
         <div class="container container-proj">
           <div class="row g-4 px-2 row-proj ">
-            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000"data-aos-delay="500">
+            <!-- ACV Card -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
               <div class="card card-proj">
+                <div class="card-title d-flex justify-content-center align-items-center gap-2 mb-0 mb-0">
+                  <h5 class="p-3">Angeles City Vet</h5>
+                  <button type="button" class="btn custom-info-btn" 
+                          data-bs-toggle="popover" data-bs-placement="right" 
+                          data-bs-content="This responsive website capstone project was developed specifically for the Angeles City Veterinary Office to improve the online adoption process for dogs in their local shelter.">
+                    <i class="fa fa-info-circle"></i>
+                  </button>
+                </div>
                 <div class="inner-card">
                   <a href="http://acv.free.nf" target="_blank">
                     <img src="assets/img/acv.png" alt="ACV Image">
@@ -432,22 +464,27 @@
                 <div class="tech">
                   <p class="badge bg-secondary">Full stack</p>
                   <p class="badge bg-primary">HTML</p>
-                  <p class="badge bg-warning">JavaScript</p>
+                  <p class="badge bg-warning">JS</p>
                   <p class="badge bg-info">CSS</p>
                   <p class="badge" style="background-color: steelblue;">PHP</p>
                   <p class="badge" style="background-color: teal;">MySQL</p>
                   <p class="badge" style="background-color: purple;">Bootstrap</p>
                 </div>
-                <div class="card-title card-title-proj">
-                  <h2>acv.free.nf</h2>
-                </div>
-                <div class="card-text">
-                  <p>This responsive website capstone project was developed specifically for the Angeles City Veterinary Office to improve the online adoption process for dogs in their local shelter.</p>
-                </div>
               </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000"data-aos-delay="600">
+
+            <!-- ACV Admin Card -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
               <div class="card card-proj">
+                <div class="card-title d-flex justify-content-center align-items-center gap-2 mb-0">
+                  <h5 class="p-3">Admin (ACV)</h5>
+                  <button type="button" class="btn custom-info-btn"
+                    data-bs-toggle="popover" data-bs-placement="right"
+                    data-bs-content="An administrator site for acv.free.nf, responsible for the CRUD operations of data and managing the adoption process online.">
+                    <i class="fa fa-info-circle"></i>
+                  </button>
+                </div>
+
                 <div class="inner-card">
                   <a href="http://acv.free.nf/adminLogin.php" target="_blank">
                     <img src="assets/img/acv-admin.png" alt="ACV Image">
@@ -459,22 +496,26 @@
                 <div class="tech">
                   <p class="badge bg-secondary">Full stack</p>
                   <p class="badge bg-primary">HTML</p>
-                  <p class="badge bg-warning">JavaScript</p>
+                  <p class="badge bg-warning">JS</p>
                   <p class="badge" style="background-color: purple;">Bootstrap</p>
                   <p class="badge bg-info">CSS</p>
                   <p class="badge" style="background-color: teal;">MySQL</p>
                   <p class="badge" style="background-color: steelblue;">PHP</p>
                 </div>
-                <div class="card-title card-title-proj">
-                  <h2>acv.free.nf (Admin)</h2>
-                </div>
-                <div class="card-text">
-                  <p>An administrator site for acv.free.nf, responsible for the CRUD operations of data and managing the adoption process online.</p>
-                </div>
               </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000"data-aos-delay="700">
+
+            <!-- Internship Portfolio Card -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
               <div class="card card-proj">
+                  <div class="card-title d-flex justify-content-center align-items-center gap-2 mb-0">
+                  <h5 class="p-3">Internship Portfolio</h5>
+                  <button type="button" class="btn custom-info-btn"
+                    data-bs-toggle="popover" data-bs-placement="right"
+                    data-bs-content="A collection of projects and skills gained during my IT internship, showcasing hands-on experience in tech support and system management.">
+                    <i class="fa fa-info-circle"></i>
+                  </button>
+                </div>
                 <div class="inner-card">
                   <a href="https://neil1227.github.io/IT-Internship/" target="_blank">
                     <img src="assets/img/intern.png" alt="ACV Image">
@@ -484,56 +525,30 @@
                   </a>
                 </div>
                 <div class="tech">
+                  <p class="badge bg-secondary">Full stack</p>
                   <p class="badge bg-secondary">Front End</p>
                   <p class="badge bg-primary">HTML</p>
-                  <p class="badge bg-warning">JavaScript</p>
+                  <p class="badge bg-warning">JS</p>
                   <p class="badge" style="background-color: purple;">Bootstrap</p>
                   <p class="badge bg-info">CSS</p>
                 </div>
-                <div class="card-title card-title-proj">
-                  <h2>IT Internship Portfolio</h2>
-                </div>
-                <div class="card-text">
-                  <p>
-                    A collection of projects and skills gained during my IT internship, showcasing hands-on experience in tech support and system management.
-                  </p>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000"data-aos-delay="800">
-            <div class="card card-proj disabled-card">
-              <div class="inner-card">
-                <div class="disabled-link">
-                  <img src="assets/img/inprogress.png" alt="Inventory Image" class="img-fluid">
-                  <div class="overlay">
-                    <i class="fas fa-eye-slash"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="tech">
-                <p class="badge bg-danger">Laravel</p>
-                <p class="badge bg-secondary">Full Stack</p>
-                <p class="badge" style="background-color: teal;">MySQL</p>
-                <p class="badge bg-primary">HTML</p>
-                <p class="badge bg-warning">JavaScript</p>
-                <p class="badge" style="background-color: purple;">Bootstrap</p>
-                <p class="badge bg-info">CSS</p>
-              </div>
-              <div class="card-title card-title-proj">
-                <h2>Inventory Management System</h2>
-              </div>
-              <div class="card-text">
-                <p>
-                  A web-based Inventory Management System designed to streamline tracking, organizing, and managing of computer units and peripherals across different departments, with real-time inventory updates.
-                </p>
               </div>
             </div>
 
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000"data-aos-delay="900">
-              <div class="card card-proj disabled-card">
-                <div class="inner-card">
+            <!-- KMU Website Card -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+              <div class="card card-proj ">
+    
+                <div class="card-title d-flex justify-content-center align-items-center gap-2 mb-0">
+                  <h5 class="p-3">KMU Website</h5>
+                  <button type="button" class="btn custom-info-btn"
+                    data-bs-toggle="popover" data-bs-placement="right"
+                    data-bs-content="A centralized platform designed to manage, organize, and share institutional knowledge and digital resources for improved accessibility and collaboration for Pampanga State Agricultural University – Office of Innovation.">
+                    <i class="fa fa-info-circle"></i>
+                  </button>
+                </div>
+
+                <div class="inner-card disabled-card">
                   <div class="disabled-link">
                     <img src="assets/img/kmu.png" alt="KMU Image" class="img-fluid">
                     <div class="overlay">
@@ -542,24 +557,48 @@
                   </div>
                 </div>
                 <div class="tech">
+                  <p class="badge bg-dark">Under Development</p>
                   <p class="badge bg-danger">Laravel</p>
                   <p class="badge bg-secondary">Full Stack</p>
                   <p class="badge" style="background-color: teal;">MySQL</p>
                   <p class="badge bg-primary">HTML</p>
-                  <p class="badge bg-warning">JavaScript</p>
+                  <p class="badge bg-warning">JS</p>
                   <p class="badge" style="background-color: purple;">Bootstrap</p>
                   <p class="badge bg-info">CSS</p>
                 </div>
-                <div class="card-title card-title-proj">
-                  <h2>KMU Website</h2>
+              </div>
+            </div>
+
+            <!-- Inventory System Card -->
+            <div class="col-12 col-sm-6 col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+              <div class="card card-proj disabled-card">
+                <div class="card-title d-flex justify-content-center align-items-center gap-2 mb-0">
+                  <h5 class="p-3">Inventory Management System</h5>
+                  <button type="button" class="btn custom-info-btn"
+                    data-bs-toggle="popover" data-bs-placement="right"
+                    data-bs-content="A web-based Inventory Management System designed to streamline tracking, organizing, and managing of computer units and peripherals across different departments, with real-time inventory updates.">
+                    <i class="fa fa-info-circle"></i>
+                  </button>
                 </div>
-                <div class="card-text">
-                  <p>
-                    A centralized platform designed to manage, organize, and share institutional knowledge and digital resources for improved accessibility and collaboration.
-                  </p>
+                <div class="inner-card">
+                  <div class="disabled-link">
+                    <img src="assets/img/superl.png" alt="Inventory Image" class="img-fluid">
+                    <div class="overlay">
+                      <i class="fas fa-eye-slash"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="tech">
+                  <p class="badge bg-dark">Under Development</p>
+                  <p class="badge bg-danger">Laravel</p>
+                  <p class="badge bg-secondary">Full Stack</p>
+                  <p class="badge" style="background-color: teal;">MySQL</p>
+                  <p class="badge bg-primary">HTML</p>
+                  <p class="badge bg-warning">JS</p>
+                  <p class="badge" style="background-color: purple;">Bootstrap</p>
+                  <p class="badge bg-info">CSS</p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -708,6 +747,14 @@
         });
       });
     </script>  
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    popoverTriggerList.forEach(function (popoverTriggerEl) {
+      new bootstrap.Popover(popoverTriggerEl)
+    })
+  });
+</script>
 
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
