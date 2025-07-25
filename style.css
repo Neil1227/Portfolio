@@ -1120,7 +1120,7 @@ body::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
 }
 
 .row-proj {
@@ -1131,7 +1131,7 @@ body::before {
 }
 
 .card-proj {
-  min-height: 350px;
+    min-height: 350px;
     padding: 5px;
     background-color: var(--card-color);
     border-radius: 10px;
