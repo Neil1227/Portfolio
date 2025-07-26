@@ -216,7 +216,7 @@ document.addEventListener('scroll', function() {
 });
 //js for 
 const username = "Neil1227";
-const token = "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"; // remember: keep this private in real use
+const token = "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"; // remember: keep this private in real use
 
 async function fetchLanguageStats() {
   try {
