@@ -1299,6 +1299,7 @@ body.dark-mode .bi-lightbulb {
 }
 
 .bg-light {
+  border-radius: 6px;
   background-color: var(--card-color) !important;
   color: var(--primary-color);
 }
@@ -1469,3 +1470,30 @@ input:checked + .slider::before {
       max-width: 300px;
       margin: 0 auto;
     }
+
+.form-control {
+  background-color: var(--card-color);
+  color: var(--primary-color) !important;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-control::placeholder {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+/* Keep placeholder color consistent even on focus */
+.form-control:focus::placeholder {
+  color: var(--primary-color);
+  opacity: 1;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+  background-color: var(--card-color);
+}

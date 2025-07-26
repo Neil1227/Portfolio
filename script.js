@@ -215,9 +215,6 @@ document.addEventListener('scroll', function() {
     }
 });
 document.addEventListener('DOMContentLoaded', () => {
-  // Your existing code...
-
-  // Move this block inside!
   const ctx = document.getElementById('skillChart');
   if (ctx) {
     const skillChart = new Chart(ctx, {
