@@ -14,6 +14,7 @@
 :root {
   --primary-color: #f1f1f1; 
   --navbar-color: #131d27;
+  --dark-card-color:#131d27a8;
   --center-icon-color: #263849; 
   --card-color: #2638496b; 
   --border-color: #38444D;
@@ -369,7 +370,7 @@ body::before {
   color: var(--secondary-color);
 }
 .active .about-card {
-  background-color: var(--navbar-color);
+  background-color: var(--dark-card-color);
 }
 .card-text strong {
   color: var(--secondary-color);
