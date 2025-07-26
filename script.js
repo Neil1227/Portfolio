@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function typeWriter() {
         const currentText = texts[textIndex];
 
-        if (!isErasing && charIndex < currentText.length) {
-            typewriterElement.innerHTML = `<span style="color: #DC5F00;">${currentText.substring(0, charIndex + 1)}</span>`;
-            charIndex++;
-            setTimeout(typeWriter, 200); // Typing speed
-        } else if (isErasing && charIndex > 0) {
-            typewriterElement.innerHTML = `<span style="color: #DC5F00;">${currentText.substring(0, charIndex - 1)}</span>`;
-            charIndex--;
-            setTimeout(typeWriter, 100); // Erasing speed
+          if (!isErasing && charIndex < currentText.length) {
+              typewriterElement.innerHTML = `<span class="gradient-text">${currentText.substring(0, charIndex + 1)}</span>`;
+              charIndex++;
+              setTimeout(typeWriter, 200); // Typing speed
+          } else if (isErasing && charIndex > 0) {
+              typewriterElement.innerHTML = `<span class="gradient-text">${currentText.substring(0, charIndex - 1)}</span>`;
+              charIndex--;
+              setTimeout(typeWriter, 100); // Erasing speed         
         } else if (!isErasing && charIndex === currentText.length) {
             setTimeout(() => {
                 isErasing = true;
@@ -214,107 +214,46 @@ document.addEventListener('scroll', function() {
       scrollToTopButton.classList.remove('show');
     }
 });
-//js for 
-const username = "Neil1227";
-const token = "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"; // remember: keep this private in real use
+document.addEventListener('DOMContentLoaded', () => {
+  // Your existing code...
 
-async function fetchLanguageStats() {
-  try {
-    const repoRes = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
-      headers: {
-        Authorization: `token ${token}`
-      }
-    });
-
-    const repos = await repoRes.json();
-
-    if (!Array.isArray(repos)) {
-      console.error("GitHub API error:", repos.message);
-      return;
-    }
-
-    const languageTotals = {};
-
-    for (const repo of repos) {
-      const langRes = await fetch(repo.languages_url, {
-        headers: {
-          Authorization: `token ${token}`
-        }
-      });
-      const langData = await langRes.json();
-
-      for (const [lang, bytes] of Object.entries(langData)) {
-        languageTotals[lang] = (languageTotals[lang] || 0) + bytes;
-      }
-    }
-
-    const labels = Object.keys(languageTotals);
-    const data = Object.values(languageTotals);
-
-    const languageColors = {
-      JavaScript: '#f1e05a',
-      HTML: '#e34c26',
-      CSS: 'teal',
-      PHP: '#4F5B93',
-      Python: '#3572A5',
-      Java: '#b07219',
-      TypeScript: '#2b7489',
-      Shell: '#89e051',
-      C: '#555555',
-      Blade: '#DC3545',
-      Vue: '#41B883',
-      SCSS: '#cd6799',
-      Other: '#cccccc'
-    };
-
-    const colors = labels.map(lang => languageColors[lang] || languageColors['Other']);
-
-    const ctx = document.getElementById("languageChart").getContext("2d");
-    new Chart(ctx, {
-      type: "doughnut",
+  // Move this block inside!
+  const ctx = document.getElementById('skillChart');
+  if (ctx) {
+    const skillChart = new Chart(ctx, {
+      type: 'doughnut',
       data: {
-        labels: labels,
+        labels: ['CSS', 'HTML', 'JavaScript', 'Laravel'],
         datasets: [{
-          label: "Languages Used",
-          data: data,
-          backgroundColor: colors
+          data: [10, 10, 7, 8],
+          backgroundColor: ['#264de4', '#e34c26', '#f0db4f', '#ff2d20'],
+          borderWidth: 2
         }]
       },
-options: {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "bottom",
-      labels: {
-        color: "#ffffff",
-        usePointStyle: true,   // 👈 required for circular legends
-        pointStyle: 'circle',
-        boxWidth: 10,
-        boxHeight: 10
+      options: {
+        plugins: {
+          title: {
+            display: false,
+            text: 'Skill Proficiency Chart',
+            font: {
+              size: 18
+            }
+          },
+          legend: {
+            position: 'bottom',
+                labels: {
+              usePointStyle: true,
+              pointStyle: 'circle',
+              padding: 20 // Adds margin between legend items
+            }
+          }
+        },
+        cutout: '60%'
       }
-      
-    },
-    tooltip: {
-      bodyColor: "#ffffff",
-      titleColor: "#ffffff"
-    }
-  },
-  layout: {
-    padding: 10
-  }
-}
-
-
     });
-  } catch (err) {
-    console.error("Error fetching data:", err);
   }
-}
+});
 
-document.addEventListener("DOMContentLoaded", fetchLanguageStats);
-
-
-                  
 //for dark mode js
 // document.addEventListener('DOMContentLoaded', () => {
 //     const toggleCheckbox = document.getElementById('toggle-theme');

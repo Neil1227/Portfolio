@@ -18,11 +18,35 @@
   --border-color: #38444D;
   --secondary-color: #f1f1f1; 
   --body-color: #192734; 
-  --tertiary-color: #DC5F00; 
-  --btn-bg-hover-color: #f37e24; 
+    --tertiary-gradient: linear-gradient(160deg, #DC5F00, #FFC300);
+  --tertiary-color: #df7829; 
+  --btn-bg-hover-color: #DC5F00; 
       --font: 'Ubuntu';
     --cb: cubic-bezier(.05, .61, .41, .95);
 }
+
+.gradient-text {
+  background: var(--tertiary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.gradient-button {
+  background: linear-gradient(160deg, #DC5F00, #FFC300);
+   text-decoration: none;
+  color: white; /* or any text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(160deg, #DC5F00, #efbd6b);
+}
+
 body {
   font-family: var(--font);
   margin: 0;
@@ -189,9 +213,9 @@ body::before {
     font-size: 1.5em;
     margin: 0.5em 0 1em 0;
 }
-.hl-text{
+/* .hl-text{
   color: var(--tertiary-color);
-}
+} */
 .btn-button {
     display: inline-block;
     padding: 0.75em 1.5em;
@@ -289,7 +313,7 @@ body::before {
     display: block;
     width: 0;
     height: 2px;
-    background: var(--tertiary-color);
+    background: var(--btn-bg-hover-co-color);
     transition: width 0.3s ease-in-out 0.2s;
     position: absolute;
     left: 0;
@@ -307,7 +331,7 @@ body::before {
     height: 2px;
     bottom: -10px;
     left: 0;
-    background-color: var(--tertiary-color);
+    background-color: var(--btn-bg-hover-color);
     visibility: hidden;
     width: 0px;
     transition: all 0.6s ease-in-out 0s;
@@ -933,7 +957,7 @@ body::before {
     color: var(--primary-color);
   }
   
-  .row-educ section .bottom a {
+  /* .row-educ section .bottom a {
     text-decoration: none;
     background: var( --tertiary-color);
     color: var(--secondary-color);
@@ -941,7 +965,7 @@ body::before {
     border-radius: 5px;
     font-weight: 400;
     transition: all 0.3s ease;
-  }
+  } */
   
   .row-educ section .bottom a:hover {
     transform: scale(0.97);
@@ -1438,3 +1462,8 @@ input:checked + .slider::before {
 .disabled-link {
   cursor: not-allowed;
 }
+
+    canvas {
+      max-width: 300px;
+      margin: 0 auto;
+    }
