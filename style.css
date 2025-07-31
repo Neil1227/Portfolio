@@ -861,7 +861,7 @@ body::before {
 
   .container-educ .center-line {
     position: absolute;
-    height: 130%;
+    height: 100vh;
     width: 4px;
     background: var( --primary-color);
     left: 50%;
