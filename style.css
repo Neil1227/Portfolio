@@ -973,7 +973,34 @@ body::before {
   .row-educ section .bottom a:hover {
     transform: scale(0.97);
   }
-  
+      @media  screen and (max-width: 2560px) {
+    .container-educ{
+      position: relative;
+    }
+    .container-educ .center-line {
+      position: absolute;
+      height: 80vh;
+      width: 4px;
+      background: var( --primary-color);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+  }
+    @media  screen and (max-width: 1440px) {
+    .container-educ{
+      position: relative;
+    }
+    .container-educ .center-line {
+      position: absolute;
+      height: 80vh;
+      width: 4px;
+      background: var( --primary-color);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+  }
   @media  screen and (max-width: 991px) {
     .container-educ{
       position: relative;
