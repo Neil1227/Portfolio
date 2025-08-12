@@ -23,7 +23,7 @@
     --tertiary-gradient: linear-gradient(160deg, #DC5F00, #FFC300);
   --tertiary-color: #df7829; 
   --btn-bg-hover-color: #DC5F00; 
-      --font: 'Ubuntu';
+      --font: 'Poppins';
     --cb: cubic-bezier(.05, .61, .41, .95);
 }
 
@@ -215,6 +215,7 @@ body::before {
     font-size: 1.5em;
     margin: 0.5em 0 1em 0;
 }
+
 /* .hl-text{
   color: var(--tertiary-color);
 } */
@@ -252,10 +253,14 @@ body::before {
     width: 100%;
     top: 0;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* light transparent background */
     /* border: 1.5px solid rgba(255, 255, 255, 0.18); */
+    backdrop-filter: blur(5px); /* blur behind the element */
+    -webkit-backdrop-filter: blur(5px); /* Safari support */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
     transition: 0.3s ease;
 }
+
 
 .navbar.scrolled {
     background-color: var(--navbar-color);
