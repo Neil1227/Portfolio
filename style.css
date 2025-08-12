@@ -215,7 +215,6 @@ body::before {
     font-size: 1.5em;
     margin: 0.5em 0 1em 0;
 }
-
 /* .hl-text{
   color: var(--tertiary-color);
 } */
@@ -866,7 +865,7 @@ body::before {
 
   .container-educ .center-line {
     position: absolute;
-    height: 100vh;
+    height: 100dvh;
     width: 4px;
     background: var( --primary-color);
     left: 50%;
@@ -998,7 +997,7 @@ body::before {
     }
     .container-educ .center-line {
       position: absolute;
-      height: 80vh;
+      height: 90vh;
       width: 4px;
       background: var( --primary-color);
       left: 50%;
